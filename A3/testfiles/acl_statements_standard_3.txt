@@ -1,0 +1,7 @@
+access-list 10 deny 192.168.1.1 0.0.0.0
+access-list 10 permit 192.168.1.0 0.0.255.255
+access-list 10 deny 192.168.1.0 0.0.0.255
+access-list 10 permit 192.169.0.0 0.0.255.255
+access-list 10 deny 193.168.0.0 0.0.255.255
+interface EO
+ip access-group 10 out

@@ -1,0 +1,6 @@
+access-list 99 deny 192.168.1.0 0.0.0.255
+access-list 99 permit 192.168.0.0 0.0.255.255
+access-list 99 deny 193.0.0.0 0.255.255.255
+access-list 99 permit 0.0.0.0 255.255.255.255
+interface EO
+ip access-group 99 out

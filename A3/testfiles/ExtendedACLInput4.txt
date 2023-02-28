@@ -1,0 +1,6 @@
+access-list 103 permit tcp any 172.16.2.1 0.0.0.0 eq  80
+access-list 103 permit tcp 172.16.2.1 0.0.0.0 172.16.2.0 0.0.0.255  eq 80
+access-list 103 deny tcp 172.16.2.1 0.0.0.0  172.16.2.4 0.0.0.0 range 21-22
+access-list 103 permit tcp  172.16.2.1 0.0.0.0 172.16.2.0 0.0.0.255 range 21-22
+interface EO
+ip access-group 103 out
