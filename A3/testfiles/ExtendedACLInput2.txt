@@ -1,6 +1,0 @@
-access-list 101 deny udp 0.0.0.0 255.255.255.255 192.168.1.0 0.0.0.255 range 2000-65535
-access-list 101 permit tcp 0.0.0.0 255.255.255.255 192.168.1.1 0.0.0.0 eq 80
-access-list 101 deny tcp 0.0.0.0 255.255.255.255 192.168.1.0 0.0.0.255 eq 80
-access-list 101 permit ip 0.0.0.0 255.255.255.255 192.168.1.0 0.0.0.255 range 20-30
-interface EO
-ip access-group 101 out

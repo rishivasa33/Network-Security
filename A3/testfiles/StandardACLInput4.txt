@@ -1,5 +1,0 @@
-access-list 11 permit 8.8.8.8 0.0.0.0
-access-list 11 deny 8.8.8.0 0.0.0.255
-access-list 11 permit 0.0.0.0 255.255.255.255
-interface EO
-ip access-group 11 out
