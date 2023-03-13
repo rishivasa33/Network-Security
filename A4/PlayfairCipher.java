@@ -9,8 +9,8 @@ import java.util.Scanner;
 
 public class PlayfairCipher {
 
-    private static final String DEFAULT_KEY_FILE = "testfiles/playfairKeyMain.txt";
-    private static final String DEFAULT_PLAINTEXT_FILE = "testfiles/playfairPlaintextMain.txt";
+    private static final String DEFAULT_KEY_FILE = "testfiles/KeyMain.txt";
+    private static final String DEFAULT_PLAINTEXT_FILE = "testfiles/PlaintextMain.txt";
 
     private static final ArrayList<Integer> REPEATED_CHARACTER_REPLACEMENT_WITH_XorQ_INDEXES = new ArrayList<>();
     private static final ArrayList<Integer> J_CHARACTER_REPLACEMENT_WITH_I_INDEXES = new ArrayList<>();
@@ -72,7 +72,7 @@ public class PlayfairCipher {
             for (int i = 0; i < keyMatrix.length; i++) {
                 for (int j = 0; j < keyMatrix[i].length; j++) {
                     keyMatrix[i][j] = keyCharSetIterator.next();
-                    System.out.print(keyMatrix[i][j]);
+                    System.out.print(keyMatrix[i][j] + "\t");
                 }
                 System.out.print("\n");
             }
