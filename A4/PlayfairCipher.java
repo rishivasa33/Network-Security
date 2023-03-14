@@ -40,7 +40,10 @@ public class PlayfairCipher {
             System.out.println("\nEncrypted CipherText: \n================================================\n" + cipherText);
 
             String decryptedPlainText = decryptCipherText(cipherText, keyMatrix);
-            System.out.println("\nDecrypted Plain Text: \n================================================\n" + decryptedPlainText);
+            System.out.println("\nDecrypted PlainText: \n================================================\n" + decryptedPlainText);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.exit(0);
         }
     }
 
@@ -69,8 +72,8 @@ public class PlayfairCipher {
         System.out.println("\nGenerated Key Matrix: \n================================================");
         Iterator<Character> keyCharSetIterator = keyCharSet.iterator();
         while (keyCharSetIterator.hasNext()) {
-            for (int i = 0; i < keyMatrix.length; i++) {
-                for (int j = 0; j < keyMatrix[i].length; j++) {
+            for (int i = 0; i < 5; i++) {
+                for (int j = 0; j < 5; j++) {
                     keyMatrix[i][j] = keyCharSetIterator.next();
                     System.out.print(keyMatrix[i][j] + "\t");
                 }
@@ -226,7 +229,7 @@ public class PlayfairCipher {
         return inputPath.isEmpty() ? defaultPath : inputPath;
     }
 
-    private static String readFileIntoString(String fileName) {
+    private static String readFileIntoString(String fileName) throws IOException {
         String fileContent;
         StringBuilder builder = new StringBuilder();
 
@@ -235,8 +238,6 @@ public class PlayfairCipher {
             while ((line = reader.readLine()) != null) {
                 builder.append(line);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
         fileContent = builder.toString().trim().toUpperCase();
 
