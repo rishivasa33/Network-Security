@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class MatrixTranspositionCipher {
 
-    private static final String DEFAULT_PLAINTEXT_FILE = "testfiles/matrixTranspositionPlaintextNotesProblem2.txt";
+    private static final String DEFAULT_PLAINTEXT_FILE = "testfiles/PlaintextMain.txt";
 
     private static int matrixColSize;
 
